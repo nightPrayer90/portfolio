@@ -1,0 +1,26 @@
+header {
+    background: rgb(158, 225, 158);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+     display: flex;
+     height: 80px;
+     padding: 20px 123px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+    padding-right: 50px;
+}
+
+a {
+    text-decoration: none;
+}
