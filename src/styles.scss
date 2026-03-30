@@ -1,3 +1,5 @@
+@use 'scss/base/fonts';
+
 /* You can add global styles to this file, and also import other style files */
 * {
   position: relative;
@@ -9,7 +11,7 @@
   scroll-behavior: smooth;
   color: white;
   font-size: inherit;
-  // font-family: "Figtree";
+  font-family: 'Roboto-R';
 }
 
 .content {
