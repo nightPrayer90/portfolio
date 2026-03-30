@@ -1,4 +1,5 @@
 @use 'scss/base/fonts';
+@use 'scss/abstract/colors' as colors;
 
 /* You can add global styles to this file, and also import other style files */
 * {
@@ -9,7 +10,7 @@
   list-style: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color: white;
+  color: colors.$color-text;
   font-size: inherit;
   font-family: 'Roboto-R';
 }
