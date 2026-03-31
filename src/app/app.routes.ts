@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { MainContent } from './layout/main-content/main-content';
-import { Imprint } from './layout/imprint/imprint';
+import { MainContent } from './shared/components/main-content/main-content';
+import { Imprint } from './shared/components/imprint/imprint';
+
 
 export const routes: Routes = [
     {
