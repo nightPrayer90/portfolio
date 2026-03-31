@@ -27,6 +27,7 @@ header {
 .logo {
   font-family: 'Handjet-R';
   font-size: 44px;
+  color: colors.$color-text-highlight;
 }
 
 .menu-system {
@@ -47,4 +48,13 @@ a {
   font-family: 'Roboto-M';
   font-size: 22px;
   color: colors.$color-text-highlight;
+}
+
+a:hover {
+  color: colors.$color-text;
+}
+
+a:active {
+  color: colors.$color-text;
+  text-decoration: underline;
 }
