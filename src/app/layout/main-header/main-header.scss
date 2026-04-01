@@ -1,11 +1,20 @@
-@use '../../../scss/abstract/colors' as colors;
+@use '../../../../public/assets/styles/all-styles.scss' as all;
+
+* {
+  color: all.$color-text-highlight;
+}
+
 
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100dvw;
 
-  background: linear-gradient(to bottom, rgba(11, 4, 45, 1), rgba(11, 4, 45, 0.2));
+  display: flex;
+  justify-content:  center;
+
+  background: linear-gradient(to bottom, rgba(11, 4, 45, 1) 60%, rgba(11, 4, 45, 0.2) 100%);
 
   .menu-bar {
     display: flex;
@@ -26,7 +35,6 @@ header {
   &__logo {
     font-family: 'Handjet-R';
     font-size: 44px;
-    color: colors.$color-text-highlight;
   }
 
   &__system {
@@ -47,14 +55,13 @@ a {
   text-decoration: none;
   font-family: 'Roboto-M';
   font-size: 22px;
-  color: colors.$color-text-highlight;
 }
 
 a:hover {
-  color: colors.$color-text;
+  color: all.$color-text;
 }
 
 a:active {
-  color: colors.$color-text;
+  color: all.$color-text;
   text-decoration: underline;
 }

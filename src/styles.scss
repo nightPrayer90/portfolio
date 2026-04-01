@@ -1,5 +1,4 @@
-@use 'scss/base/fonts';
-@use 'scss/abstract/colors' as colors;
+@use '../public/assets/styles/all-styles.scss' as all;
 
 /* You can add global styles to this file, and also import other style files */
 * {
@@ -10,7 +9,7 @@
   list-style: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  color: colors.$color-text;
+  color: all.$color-text;
   font-size: inherit;
   font-family: 'Roboto-R';
 }
@@ -22,17 +21,35 @@
 }
 
 body {
-  background: linear-gradient(
-    180deg,
-    rgba(19, 7, 78, 1) 0%,
-    rgba(29, 10, 121, 0.95) 100%
-  );
-
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(180deg, rgba(19, 7, 78, 1) 0%, rgba(29, 10, 121, 0.95) 100%);
   min-height: 100dvh;
 }
 
 section {
   background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: all.$color-text-highlight;
+  font-size: 54px;
+  font-family: 'Roboto-M';
+  margin-bottom: 64px;
+  margin-top: 64px;
+}
+
+h2 {
+  color: all.$color-text-highlight;
+  font-size: 24px;
+  font-family: 'Roboto-B';
+  margin-bottom: 24px;
+}
+
+h3 {
+  color: all.$color-text-highlight;
+  font-size: 19px;
+  font-family: 'Roboto-B';
+  margin-top: 24px;
 }
