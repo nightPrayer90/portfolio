@@ -22,19 +22,19 @@ header {
   display: flex;
   align-items: center;
   gap: 48px;
-}
 
-.logo {
-  font-family: 'Handjet-R';
-  font-size: 44px;
-  color: colors.$color-text-highlight;
-}
+  &__logo {
+    font-family: 'Handjet-R';
+    font-size: 44px;
+    color: colors.$color-text-highlight;
+  }
 
-.menu-system {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
+  &__system {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+  }
 }
 
 .language-container {

@@ -1,5 +1,103 @@
+@use '../../../scss/abstract/colors' as colors;
+
+* {
+  color: colors.$color-text-highlight;
+}
+
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 65px;
+}
+
+.footer-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  padding: 0 108px;
 }
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  width: 100%;
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__MS {
+      font-family: 'Handjet-R';
+      font-size: 54px;
+    }
+
+    &__text {
+      font-family: 'Roboto-M';
+      font-size: 16px;
+    }
+  }
+
+  .footer-copyright {
+    align-self: flex-end;
+    font-family: 'Roboto-R';
+    font-size: 23px;
+  }
+
+  .footer-socials {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+  }
+
+  .footer-left {
+    justify-self: start;
+  }
+
+  .footer-center {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-self: end;
+  }
+}
+
+.footer-links-container {
+  margin-top: 16px;
+}
+
+svg path {
+    color: colors.$color-text-highlight;
+}
+
+a {
+    font-family: 'Roboto-R';
+    font-size: 16px;
+  }
+
+a:hover {
+  color: colors.$color-text;
+  svg path {
+    color:  colors.$color-text;
+  }
+}
+
+a:active {
+  color: colors.$color-text;
+  text-decoration: underline;
+}
+
+
