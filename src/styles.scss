@@ -23,6 +23,9 @@
 body {
   background: linear-gradient(180deg, rgba(19, 7, 78, 1) 0%, rgba(29, 10, 121, 0.95) 100%);
   min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 section {
