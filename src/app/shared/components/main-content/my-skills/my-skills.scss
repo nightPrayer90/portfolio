@@ -1,0 +1,34 @@
+section {
+  margin-top: 100px;
+}
+
+.skills {
+  padding: 0 110px;
+  &__h2 {
+    font-family: 'Roboto-M';
+    font-size: 54px;
+    margin-bottom: 36px;
+  }
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: start;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100px;
+  height: 200px;
+    font-size: 18px;
+  text-align: center;
+
+  svg {
+    width: 80px;
+    height: auto;
+  }
+}
