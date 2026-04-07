@@ -1,0 +1,95 @@
+section {
+  margin-top: 100px;
+}
+
+.WM {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 105px;
+
+  &__image {
+    width: 488px;
+    height: 452px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+
+    &__h2 {
+      text-align: right;
+      font-family: 'Roboto-M';
+      font-size: 54px;
+    }
+
+    &__p {
+      text-align: right;
+      font-family: 'Roboto-R';
+      font-size: 16px;
+    }
+
+    &__container {
+      width: 568px;
+      height: 186px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &__h3 {
+        font-family: 'Roboto-B';
+        font-size: 48px;
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        width: 65%;
+        height: 100%;
+
+        &__p {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          width: 170px;
+        }
+
+        &__p svg {
+          height: 45px;
+          flex-shrink: 0;
+        }
+
+        &__arrow1 {
+            position: absolute;
+            top: 38%;
+            left: -8%;
+        }
+
+        &__arrow2 {
+            position: absolute;
+            top: 74%;
+            left: 54%;
+        }
+
+        &__arrow3 {
+            position: absolute;
+            top: 72%;
+            left: 88%;
+        }
+      }
+    }
+
+    &__button {
+        height: 52px;
+    }
+  }
+}
+
+.selfEnd {
+    align-self: flex-end;
+}
