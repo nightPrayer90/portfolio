@@ -1,0 +1,52 @@
+@use '../../../../../../public/assets/styles/all-styles.scss' as all;
+
+*{
+    color: all.$color-text;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 52px;
+
+  &__arrow-link {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 50px;
+
+    &__contactBtn {
+      transform: rotate(-90deg);
+      width: 169px;
+      height: 52px;
+      top: 117px;
+      left: -52px;
+    }
+
+    &__h1 {
+      font-size: 54px;
+      font-family: 'Roboto-M';
+      margin: 0;
+    }
+
+    &__p {
+      font-size: 72px;
+      font-family: 'Roboto-B';
+    }
+  }
+
+  
+&__image {
+  width: 540px;
+  height: 550px;
+}
+}
+
