@@ -21,7 +21,7 @@
 }
 
 body {
-  background: linear-gradient(180deg, rgba(19, 7, 78, 1) 0%, rgba(29, 10, 121, 0.95) 100%);
+  background: #120b35;
   min-height: 100dvh;
 
   display: flex;
@@ -55,4 +55,56 @@ h3 {
   font-size: 19px;
   font-family: 'Roboto-B';
   margin-top: 24px;
+}
+
+button {
+  font-family: 'Roboto-M';
+  font-size: 18px;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+}
+
+.button--primary {
+  color: all.$color-text-btn-primary;
+  background-color: all.$color-btn;
+}
+
+.button--primary:hover {
+  color: all.$color-text-highlight;
+  font-family: 'Roboto-R';
+}
+
+.button--primary:active {
+  color: all.$color-text-highlight;
+  font-family: 'Roboto-B';
+}
+
+.button--primary--disabled {
+  color: white;
+  font-family: 'Roboto-B';
+  background-color: all.$color-btn-disabled;
+}
+
+.button--secondary {
+  background: none;
+  border: solid 1px all.$color-btn;
+  color: all.$color-text-highlight;
+}
+
+.button--secondary:hover {
+  color: all.$color-text;
+}
+
+.button--secondary:active {
+  color: all.$color-text-highlight;
+  font-family: 'Roboto-B';
+  border: solid 1px all.$color-text-highlight;
+}
+
+.button--secondary--disabled {
+  color: all.$color-btn-disabled;
+  font-family: 'Roboto-M';
+  border: solid 1px all.$color-btn-disabled;
 }

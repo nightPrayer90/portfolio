@@ -1,9 +1,5 @@
 @use '../../../../../../public/assets/styles/all-styles.scss' as all;
 
-*{
-    color: all.$color-text;
-}
-
 .hero {
   display: flex;
   flex-direction: row;
@@ -25,8 +21,7 @@
 
     &__contactBtn {
       transform: rotate(-90deg);
-      width: 169px;
-      height: 52px;
+      width: 175px;
       top: 117px;
       left: -52px;
     }
@@ -34,6 +29,7 @@
     &__h1 {
       font-size: 54px;
       font-family: 'Roboto-M';
+      color: all.$color-text;
       margin: 0;
     }
 
@@ -43,10 +39,8 @@
     }
   }
 
-  
-&__image {
-  width: 540px;
-  height: 550px;
+  &__image {
+    width: 540px;
+    height: 550px;
+  }
 }
-}
-
