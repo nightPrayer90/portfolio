@@ -1,0 +1,38 @@
+section {
+    margin-top: 30px;
+}
+
+.teamplayer {
+    padding: 0 110px;
+
+    &__h2 {
+        font-family: 'Roboto-B';
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+.members {
+    display: flex;
+    padding-left: 10px;
+    width: 100%;
+    gap:3%;
+}
+
+.member {
+    width: 25%;
+
+    &__name {
+        font-family: 'Roboto-B';
+        font-size: 24px;
+    }
+
+    p {
+        font-family: 'Roboto-R';
+        font-size: 18px;
+    }
+
+    &__project {
+        margin-bottom: 24px;
+    }
+}

@@ -5,18 +5,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 64px;
 }
 
 .project-header {
   font-family: 'Roboto-M';
   font-size: 54px;
-  margin-bottom: 64px;
 }
 
 .project {
   display: flex;
   gap: 64px;
-  margin-bottom: 64px;
 
   &__img-wrapper {
     width: 560px;

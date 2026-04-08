@@ -4,11 +4,12 @@ import { MyProjects } from './my-projects/my-projects';
 import { MySkills } from './my-skills/my-skills';
 import { WhyMe } from './why-me/why-me';
 import { Contact } from './contact/contact';
+import { Teamplayer } from './teamplayer/teamplayer';
 
 
 @Component({
   selector: 'app-main-content',
-  imports: [Hero,MyProjects, MySkills, WhyMe,Contact],
+  imports: [Hero,MyProjects, MySkills, WhyMe, Teamplayer, Contact],
   templateUrl: './main-content.html',
   styleUrl: './main-content.scss',
 })
