@@ -80,7 +80,7 @@ button {
     font-family: 'Roboto-B';
   }
 
-  &--disabled {
+  &:disabled {
     color: white;
     font-family: 'Roboto-B';
     background-color: all.$color-btn-disabled;
@@ -102,9 +102,15 @@ button {
     border: solid 1px all.$color-text-highlight;
   }
 
-  &--disabled {
+  &:disabled {
     color: all.$color-btn-disabled;
     font-family: 'Roboto-M';
     border: solid 1px all.$color-btn-disabled;
   }
+}
+
+.input-field{
+  padding: 15px 15px;
+  background: none;
+  border: solid 1px all.$color-btn;
 }

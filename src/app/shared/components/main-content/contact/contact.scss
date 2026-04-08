@@ -1,0 +1,78 @@
+.contact {
+  padding: 0 110px;
+  width: 100%;
+  margin-bottom: 110px;
+
+  &__h2 {
+    font-family: 'Roboto-M';
+    font-size: 54px;
+  }
+}
+
+.input-wrapper {
+  .input-field {
+    width: 100%;
+    padding-right: 50px;
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 40px;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 1;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  margin-bottom: 32px;
+  font-family: 'Roboto-R';
+  font-size: 18px;
+}
+
+a {
+  display: flex;
+  font-size: 20px;
+  font-family: 'Roboto-M';
+  align-items: center;
+  column-gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-submit {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
