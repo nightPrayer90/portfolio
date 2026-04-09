@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="inputs__right">
-                        <a href="mailto:m_steguweit@mail.com"> 
+                        <a href="mailto:m_steguweit@mail.com">
                             <svg width="29" height="30" viewBox="0 0 29 30" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -27,7 +27,7 @@
                             </svg>
                             <span>E-mail: mustermail@gmail.com</span></a>
 
-                        <a href="tel:015712345668"> 
+                        <a href="tel:015712345668">
                             <svg width="27" height="31" viewBox="0 0 27 31" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -44,7 +44,8 @@
 
                         <!-- your name -->
                         <div class="input-wrapper">
-                            <input id="yourName" class="input-field" type="text" formControlName="yourName" placeholder="Your Name">
+                            <input id="yourName" class="input-field" type="text" formControlName="yourName"
+                                placeholder="Your Name">
 
                             @if (userform.get("yourName")?.touched){
                             @if (!userform.get("yourName")?.valid) {
@@ -123,10 +124,25 @@
                     </div>
                 </div>
 
-                <label><input id="pp" type="checkbox">I've read the privacy policy and agree to the processing of my data as outlined.</label>
+                <p>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" formControlName="privacyPolicy">
+                        <span class="checkmark">
+                            @if (userform.get('privacyPolicy')?.value) {
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.6 13.4L8.45 11.25C8.26667 11.0667 8.03333 10.975 7.75 10.975C7.46667 10.975 7.23333 11.0667 7.05 11.25C6.86667 11.4333 6.775 11.6667 6.775 11.95C6.775 12.2333 6.86667 12.4667 7.05 12.65L9.9 15.5C10.1 15.7 10.3333 15.8 10.6 15.8C10.8667 15.8 11.1 15.7 11.3 15.5L16.95 9.85C17.1333 9.66667 17.225 9.43333 17.225 9.15C17.225 8.86667 17.1333 8.63333 16.95 8.45C16.76667 8.26667 16.53333 8.175 16.25 8.175C15.96667 8.175 15.73333 8.26667 15.55 8.45L10.6 13.4Z"
+                                    fill="currentColor" />
+                            </svg>
+                            }
+                        </span>
+                    </label>
+                    I've read the privacy policy and agree to the processing of my data as outlined.
+                </p>
 
                 <div class="form-submit">
-                    <button class="button--primary" type="submit" [disabled]="!userform.valid">submit</button>
+                    <button class="button--primary" type="submit" [disabled]="!userform.valid">Send</button>
                 </div>
             </form>
         </div>

@@ -12,6 +12,7 @@ export class Contact {
     yourName: new FormControl('', { validators: [Validators.required, Validators.minLength(3)] }),
     yourMessage: new FormControl('', { validators: [Validators.required, Validators.minLength(5)] }),
     yourEmail: new FormControl('', { validators: [Validators.required, Validators.email] }),
+    privacyPolicy: new FormControl(false, { validators: [Validators.requiredTrue] }),
   });
 
   // submit btn
