@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
+import { Router, RouterOutlet, NavigationEnd, NavigationSkipped  } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
 import { MainHeader } from './layout/main-header/main-header';
@@ -18,7 +18,7 @@ export class App {
     this.scroller.setOffset([0, 92]);
 
     this.router.events
-      .pipe(filter(e => e instanceof NavigationEnd))
+      .pipe(filter(e => e instanceof NavigationEnd || e instanceof NavigationSkipped))
       .subscribe(() => {
         const fragment = this.router.parseUrl(this.router.url).fragment;
         if (fragment) {
