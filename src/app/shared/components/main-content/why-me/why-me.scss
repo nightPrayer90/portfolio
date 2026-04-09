@@ -52,40 +52,57 @@
           display: flex;
           align-items: flex-start;
           gap: 10px;
-          width: 170px;
-        }
+          width: 180px;
 
-        &__p svg {
-          height: 45px;
-          flex-shrink: 0;
-        }
+          svg {
+            height: 50px;
+            flex-shrink: 0;
+          }
 
+          .icon-hover {
+            display: none;
+          }
+
+          &:hover {
+            .icon-hover {
+              display: block;
+            }
+
+            .icon-default {
+              display: none;
+            }
+          }
+        }
         &__arrow1 {
-            position: absolute;
-            top: 38%;
-            left: -8%;
+          position: absolute;
+          top: 38%;
+          left: -8%;
         }
 
         &__arrow2 {
-            position: absolute;
-            top: 74%;
-            left: 54%;
+          position: absolute;
+          top: 74%;
+          left: 54%;
         }
 
         &__arrow3 {
-            position: absolute;
-            top: 72%;
-            left: 88%;
+          position: absolute;
+          top: 72%;
+          left: 88%;
         }
       }
     }
 
     &__button {
-        margin-top: 10px;
+      margin-top: 10px;
     }
   }
 }
 
 .selfEnd {
-    align-self: flex-end;
+  align-self: flex-end;
+}
+
+.change-pos{
+  bottom:15px;
 }
