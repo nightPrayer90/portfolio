@@ -1,3 +1,5 @@
+@use '../../../../../../public/assets/styles/all-styles.scss' as all;
+
 .contact {
   padding: 0 110px;
   width: 100%;
@@ -68,6 +70,20 @@ a {
   align-items: center;
   column-gap: 16px;
   margin-bottom: 16px;
+
+  svg path {
+    color: all.$color-text-highlight;
+  }
+
+  &:hover {
+    svg path {
+      color: all.$color-text;
+    }
+  }
+
+  &:active {
+    text-decoration: underline;
+  }
 }
 
 .form-submit {
