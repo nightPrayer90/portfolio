@@ -75,6 +75,9 @@ footer {
 
 .footer-links-container {
   margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
 }
 
 svg path {
