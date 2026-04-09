@@ -1,19 +1,21 @@
 <header>
-    <div class = "menu-bar content">
-        <nav class = "menu">
+    <div class="menu-bar content">
+        <nav class="menu">
             <p class="menu__logo">&lt;MS&gt;</p>
             <ul class="menu__system">
-                <li><a href="">Why me</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="">{{ 'NAV.WHY_ME' | translate }}</a></li>
+                <li><a href="">{{ 'NAV.SKILLS' | translate }}</a></li>
+                <li><a href="">{{ 'NAV.PROJECTS' | translate }}</a></li>
+                <li><a href="">{{ 'NAV.CONTACT' | translate }}</a></li>
             </ul>
         </nav>
 
         <div class="language-container">
-            <button>DE</button>
-            <p>|</p>
-            <button>EN</button>
+            <div class="language-container">
+                <button (click)="switchLang('de')">DE</button>
+                <p>|</p>
+                <button (click)="switchLang('en')">EN</button>
+            </div>
         </div>
     </div>
 </header>
