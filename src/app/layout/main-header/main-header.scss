@@ -49,6 +49,18 @@ header {
   display: flex;
   align-items: center;
   flex-direction: row;
+
+  &__button {
+    border: none;
+    background: none;
+    padding: 10px;
+    font-family: 'Roboto-B';
+    font-size: 18px;
+  
+    &--active {
+      color: all.$color-text;
+    }
+  }
 }
 
 a {
@@ -65,3 +77,4 @@ a:active {
   color: all.$color-text;
   text-decoration: underline;
 }
+

@@ -21,7 +21,7 @@
 }
 
 body {
-  background: #120b35;
+  background: linear-gradient(180deg, #120B35 0%, #1d0a79 50%,  #120B35 95%);
   min-height: 100dvh;
 
   display: flex;
@@ -109,7 +109,7 @@ button {
   }
 }
 
-.input-field{
+.input-field {
   padding: 15px 15px;
   background: none;
   border: solid 1px all.$color-btn;
