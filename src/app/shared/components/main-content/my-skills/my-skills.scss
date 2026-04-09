@@ -1,4 +1,3 @@
-
 .skills {
   padding: 0 110px;
   &__h2 {
@@ -22,11 +21,30 @@
   gap: 10px;
   width: 100px;
   height: 150px;
-    font-size: 18px;
+  font-size: 18px;
   text-align: center;
 
   svg {
     width: 70px;
     height: auto;
+  }
+}
+
+.challange-me {
+  cursor: pointer;
+  &__hover {
+    display: none;
+  }
+  &:hover {
+    .challange-me__hover {
+      display: block;
+      position: absolute;
+      width: 250px;
+      top: 0;
+      left: 130px;
+      text-align: left;
+      font-size: 18px;
+      font-family: 'Roboto-R';
+    }
   }
 }
