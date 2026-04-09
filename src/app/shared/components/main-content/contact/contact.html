@@ -44,7 +44,7 @@
 
                         <!-- your name -->
                         <div class="input-wrapper">
-                            <input class="input-field" type="text" formControlName="yourName" placeholder="Your Name">
+                            <input id="yourName" class="input-field" type="text" formControlName="yourName" placeholder="Your Name">
 
                             @if (userform.get("yourName")?.touched){
                             @if (!userform.get("yourName")?.valid) {
@@ -69,7 +69,7 @@
 
                         <!-- your Email -->
                         <div class="input-wrapper">
-                            <input class="input-field" id="name" type="text" formControlName="yourEmail"
+                            <input id="yourMail" class="input-field" type="text" formControlName="yourEmail"
                                 placeholder="Your Email">
 
                             @if (userform.get("yourEmail")?.touched){
@@ -97,7 +97,7 @@
                     <!-- your Message -->
                     <div class="inputs__right">
                         <div class="input-wrapper fullHeight">
-                            <textarea class="input-field" id="name" type="text" formControlName="yourMessage"
+                            <textarea class="input-field" id="<yourMessage" type="text" formControlName="yourMessage"
                                 placeholder="Your Message"></textarea>
 
                             @if (userform.get("yourMessage")?.touched){
@@ -123,7 +123,7 @@
                     </div>
                 </div>
 
-                <label><input type="checkbox">I've read the privacy policy and agree to the processing of my data as outlined.</label>
+                <label><input id="pp" type="checkbox">I've read the privacy policy and agree to the processing of my data as outlined.</label>
 
                 <div class="form-submit">
                     <button class="button--primary" type="submit" [disabled]="!userform.valid">submit</button>

@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './my-projects.html',
   styleUrl: './my-projects.scss',
 })
-export class MyProjects {}
+export class MyProjects {
+  openLink(url: string) {
+    window.open(url, '_blank');
+  }
+}
