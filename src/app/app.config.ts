@@ -1,5 +1,10 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideAppInitializer, inject } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  ApplicationConfig,
+  provideBrowserGlobalErrorListeners,
+  provideAppInitializer,
+  inject,
+} from '@angular/core';
+import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { routes } from './app.routes';
 
 import { provideHttpClient } from '@angular/common/http';
@@ -9,7 +14,7 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'top' })),
 
     provideHttpClient(),
 
@@ -17,13 +22,13 @@ export const appConfig: ApplicationConfig = {
       fallbackLang: 'en',
       loader: provideTranslateHttpLoader({
         prefix: '/i18n/',
-        suffix: '.json'
-      })
+        suffix: '.json',
+      }),
     }),
 
     provideAppInitializer(() => {
       const translate = inject(TranslateService);
       translate.use(translate.getBrowserLang() || 'en');
-    })
-  ]
+    }),
+  ],
 };

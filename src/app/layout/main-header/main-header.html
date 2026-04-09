@@ -3,10 +3,10 @@
         <nav class="menu">
             <p class="menu__logo">&lt;MS&gt;</p>
             <ul class="menu__system">
-                <li><a href="#why-me">{{ 'NAV.WHY_ME' | translate }}</a></li>
-                <li><a href="#skills">{{ 'NAV.SKILLS' | translate }}</a></li>
-                <li><a href="#projects">{{ 'NAV.PROJECTS' | translate }}</a></li>
-                <li><a href="#contact">{{ 'NAV.CONTACT' | translate }}</a></li>
+                <li><a [routerLink]="['']" fragment="why-me">{{ 'NAV.WHY_ME' | translate }}</a></li>
+                <li><a [routerLink]="['']" fragment="skills">{{ 'NAV.SKILLS' | translate }}</a></li>
+                <li><a [routerLink]="['']" fragment="projects">{{ 'NAV.PROJECTS' | translate }}</a></li>
+                <li><a [routerLink]="['']" fragment="contact">{{ 'NAV.CONTACT' | translate }}</a></li>
             </ul>
         </nav>
 
