@@ -118,7 +118,7 @@
                     <!-- your Message -->
                     <div class="inputs__right">
                         <div class="input-wrapper fullHeight">
-                            <textarea class="input-field" id="<yourMessage" type="text" formControlName="yourMessage"
+                            <textarea class="input-field" id="yourMessage" type="text" formControlName="yourMessage"
                                 placeholder="Your Message"></textarea>
 
                             @if (userform.get("yourMessage")?.touched){
@@ -163,7 +163,7 @@
                 </p>
 
                 <div class="form-submit">
-                    <button class="button--primary" type="submit" [disabled]="!userform.valid">Send</button>
+                    <button class="button--primary" type="submit" [disabled]="!userform.get('privacyPolicy')?.valid">Send</button>
                 </div>
             </form>
         </div>

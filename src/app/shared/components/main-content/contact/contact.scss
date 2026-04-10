@@ -17,11 +17,21 @@
     padding-right: 50px;
   }
 
+  .input-field:focus {
+    outline: none;
+  }
+
   .input-icon {
+    width: 25px;
+    align-items: center;
     position: absolute;
-    top: 50%;
+    top: 27px;
     right: 12px;
     transform: translateY(-50%);
+  }
+
+  .input-invalid::placeholder {
+    color: red;
   }
 }
 
