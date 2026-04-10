@@ -44,6 +44,27 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    &__arrow {
+      position: absolute;      
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      width: 38px;
+      top: 50%;
+      right: -19px;
+      .icon_hover {
+        display: none;
+      }
+      &:hover {
+        .icon_default {
+          display: none;
+        }
+        .icon_hover {
+          display: block;
+        }
+      }
+    }
   }
 }
 
@@ -103,6 +124,7 @@ a {
   align-items: center;
   column-gap: 16px;
   margin-bottom: 16px;
+  align-self: flex-start;
 
   svg path {
     color: all.$color-text-highlight;
