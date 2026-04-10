@@ -21,7 +21,7 @@
 }
 
 body {
-  background: linear-gradient(180deg, #120B35 0%, #1d0a79 50%,  #120B35 95%);
+  background: linear-gradient(180deg, all.$color-background-1 0%, all.$color-background-2 50%,  all.$color-background-1 95%);
 }
 
 section {

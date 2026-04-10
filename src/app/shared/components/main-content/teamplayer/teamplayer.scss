@@ -1,3 +1,5 @@
+@use '../../../../../../public/assets/styles/all-styles.scss' as all;
+
 section {
     margin-top: 30px;
 }
@@ -17,6 +19,10 @@ section {
     padding-left: 10px;
     width: 100%;
     gap:3%;
+
+    svg path{
+        color: all.$color-text-highlight;
+    }
 }
 
 .member {

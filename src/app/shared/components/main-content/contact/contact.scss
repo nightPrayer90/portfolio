@@ -8,6 +8,10 @@
   &__h2 {
     font-family: 'Roboto-M';
     font-size: 54px;
+
+    svg path {
+      color: all.$color-text-highlight;
+    }
   }
 }
 
@@ -56,17 +60,24 @@
     flex: 1;
 
     &__arrow {
-      position: absolute;      
+      position: absolute;
       transform: translate(-50%, -50%);
       display: flex;
       justify-content: center;
       width: 38px;
       top: 50%;
       right: -19px;
+      svg path {
+        color: all.$color-text-highlight;
+      }
       .icon_hover {
         display: none;
       }
       &:hover {
+        svg path {
+          color: all.$color-text;
+        }
+
         .icon_default {
           display: none;
         }

@@ -1,3 +1,5 @@
+@use '../../../../../../public/assets/styles/all-styles.scss' as all;
+
 .WM {
   display: flex;
   flex-direction: row;
@@ -78,18 +80,27 @@
           position: absolute;
           top: 38%;
           left: -8%;
+          path {
+            color: all.$color-text-highlight;
+          }
         }
 
         &__arrow2 {
           position: absolute;
           top: 74%;
           left: 54%;
+          path {
+            color: all.$color-text-highlight;
+          }
         }
 
         &__arrow3 {
           position: absolute;
           top: 72%;
           left: 88%;
+          path {
+            color: all.$color-text-highlight;
+          }
         }
       }
     }
@@ -104,6 +115,6 @@
   align-self: flex-end;
 }
 
-.change-pos{
-  bottom:15px;
+.change-pos {
+  bottom: 15px;
 }

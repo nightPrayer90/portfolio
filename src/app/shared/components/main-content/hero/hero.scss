@@ -15,8 +15,11 @@
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
+    color: all.$color-text-highlight;
 
     .icon-hover {
+      color: all.$color-text;
+
       display: none;
     }
 
