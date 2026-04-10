@@ -1,8 +1,46 @@
 {
   "NAV": {
-    "WHY_ME": "Warum ich",
-    "SKILLS": "Skills",
-    "PROJECTS": "Projekte",
-    "CONTACT": "Kontakt"
+    "whyMe": "Warum ich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "HERO": {
+    "contact": "KONTAKT"
+  },
+  "WHY_ME": {
+    "whyMe": "Warum ich",
+    "whyMeDesc": "Ich bin ein IT-begeisterter Entwickler mit Leidenschaft für Programmierung und Problemlösung. Ich setze komplexe Ideen in funktionierende Systeme um und gehe Herausforderungen strukturiert an.",
+    "iM": "Ich bin",
+    "located": "Wohnhaft in Chemnitz",
+    "relocate": "Offen für Ortswechsel",
+    "remote": "Offen für Remotearbeit"
+  },
+  "SKILLS": {
+    "skills": "Skills",
+    "challenge": "Ich lerne immer gerne neue Technologien kennen – sagen Sie mir einfach, was Sie brauchen."
+  },
+  "PROJECTS": {
+    "projects": "Meine Projekte",
+    "join": "Aufgabenmanager nach dem Vorbild des Kanban-Systems: Erstellen und organisieren Sie Aufgaben per Drag & Drop, weisen Sie Benutzern und Kategorien zu.",
+    "polloLoco": "Ein Spiel zum Springen, Laufen und Werfen, das auf einem objektorientierten Ansatz basiert. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen." 
+  },
+  "MATES": {
+    "mates": "Suchen Sie einen Teamplayer? Das sagen meine Kollegen über mich",
+    "mate1": "Martin musste in Zusammenarbeit mit den Teammitgliedern Inhalte erstellen, aufbereiten und bereitstellen. Er ist ein zuverlässiger und freundlicher Mensch.",
+    "mate2": "Martin musste in Zusammenarbeit mit den Teammitgliedern Inhalte erstellen, aufbereiten und bereitstellen. Er ist ein zuverlässiger und freundlicher Mensch.",
+    "mate3": "Martin musste in Zusammenarbeit mit den Teammitgliedern Inhalte erstellen, aufbereiten und bereitstellen. Er ist ein zuverlässiger und freundlicher Mensch."
+  },
+  "CONTACT": {
+    "contact": "Kontieren Sie mich",
+    "contactCta": "Noch unsicher, ob ich der richtige Ansprechpartner für Ihr Projekt bin? Kontaktieren Sie mich gerne und lassen Sie uns zusammenarbeiten.",
+    "privacy1": "Ich habe die ",
+    "privacy2": " gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
+    "privacyLink": "Datenschutzerklärung",
+    "sendBtn": "Senden"
+  },
+  "FOOTER": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutzerklärung"
   }
 }

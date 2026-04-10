@@ -1,8 +1,46 @@
 {
   "NAV": {
-    "WHY_ME": "Why me",
-    "SKILLS": "Skills",
-    "PROJECTS": "Projects",
-    "CONTACT": "Contact"
+    "whyMe": "Why me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "HERO": {
+    "contact": "CONTACT ME"
+  },
+  "WHY_ME": {
+    "whyMe": "Why me",
+    "whyMeDesc": "I am an IT enthusiast with a passion for coding and problem-solving. I enjoy turning complex ideas into functional systems. I am motivated to continuously grow and approach challenges in a structured and solution-oriented way.",
+    "iM": "I am",
+    "located": "located in Chemnitz",
+    "relocate": "open to relocate",
+    "remote": "open to work remote"
+  },
+  "SKILLS": {
+    "skills": "Skills",
+    "challenge": "I am always happy to learn new technologies, just tell me what you need."
+  },
+  "PROJECTS": {
+    "projects": "My Projects",
+    "join": "Task manager inspired by the Kanban System Create and organize tasks using drag and drop functions, assign users and categories.",
+    "polloLoco": "Jump, run and throw game based on object- oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+  },
+  "MATES": {
+    "mates": "Need a teamplayer? Hers's what my colleagues say about me",
+    "mate1": "Martin had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person.",
+    "mate2": "Martin had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person.",
+    "mate3": "Martin had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person."
+  },
+  "CONTACT": {
+    "contact": "Contact me",
+    "contactCta": "If you are unsure whether I am the right fit for your project, feel free to get in touch. I would be happy to discuss your requirements and how I can contribute.",
+    "privacy1": "I've read the ",
+    "privacy2": " and agree to the processing of my data as outlined.",
+    "privacyLink": "Privacy policy",
+    "sendBtn": "Send"
+  },
+  "FOOTER": {
+    "imprint": "Legal notice",
+    "privacy": "Privacy policy"
   }
 }

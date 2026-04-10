@@ -127,7 +127,7 @@ p {
   font-size: 18px;
 }
 
-a {
+.contact-links {
   display: flex;
   font-size: 20px;
   font-family: 'Roboto-M';
@@ -148,6 +148,15 @@ a {
 
   &:active {
     text-decoration: underline;
+  }
+}
+
+.policy-link {
+  color: all.$color-text-highlight;
+  font-family: 'Roboto-R';
+
+  &:hover {
+    font-family: 'Roboto-B';
   }
 }
 

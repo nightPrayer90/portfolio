@@ -14,7 +14,7 @@
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-    top: 60%;
+    top: 50%;
 
     .icon-hover {
       display: none;
@@ -35,7 +35,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding-left: 50px;
-    height: 60%;
+    height: 75%;
 
     &__contactBtn {
       transform: rotate(-90deg);
