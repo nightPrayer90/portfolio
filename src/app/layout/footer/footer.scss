@@ -18,6 +18,9 @@ footer {
   flex-direction: column;
 
   padding: 0 108px;
+  @include all.notebook {
+    padding: 0 32px;
+  }
 }
 
 .footer-container {
@@ -27,6 +30,10 @@ footer {
 
   width: 100%;
 
+  @include all.tablet {
+    grid-template-columns: 1fr;
+  }
+
   .footer-logo {
     display: flex;
     justify-content: center;
@@ -35,20 +42,23 @@ footer {
 
     &__MS {
       font-family: 'Handjet-R';
-      font-size: 54px;
+      font-size: clamp(48px, 1.5dvw, 54px);;
       font-weight: 700;
     }
 
     &__text {
       font-family: 'Roboto-M';
       font-size: 16px;
+      @include all.tablet {
+        display: none;
+      }
     }
   }
 
   .footer-copyright {
     align-self: flex-end;
-    font-family: 'Roboto-R';
-    font-size: 23px;
+    font-family: 'Roboto-M';
+    font-size: clamp(16px, 1.5dvw, 23px);
   }
 
   .footer-socials {
@@ -62,15 +72,31 @@ footer {
 
   .footer-left {
     justify-self: start;
+
+    @include all.tablet {
+      margin-top: 80px;
+      grid-row: 2;
+      justify-self: center;
+    }
   }
 
   .footer-center {
     justify-self: center;
     text-align: center;
+
+    @include all.tablet {
+      grid-row: 3;
+    }
   }
 
   .footer-right {
     justify-self: end;
+
+    @include all.tablet {
+      margin-top: 40px;
+      grid-row: 1;
+      justify-self: center;
+    }
   }
 }
 
@@ -79,6 +105,13 @@ footer {
   display: flex;
   flex-direction: row;
   gap: 32px;
+
+  @include all.tablet {
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
 }
 
 svg path {

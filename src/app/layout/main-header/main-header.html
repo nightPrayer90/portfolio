@@ -1,7 +1,7 @@
 <header>
     <div class="menu-bar content">
         <nav class="menu">
-            <p class="menu__logo">&lt;MS&gt;</p>
+            <p [routerLink]="['']" fragment="hero" class="menu__logo">&lt;MS&gt;</p>
             <ul class="menu__system">
                 <li><a [routerLink]="['']" fragment="why-me">{{ 'NAV.whyMe' | translate }}</a></li>
                 <li><a [routerLink]="['']" fragment="skills">{{ 'NAV.skills' | translate }}</a></li>
