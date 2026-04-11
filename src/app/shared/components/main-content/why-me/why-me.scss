@@ -1,14 +1,42 @@
 @use '../../../../../../public/assets/styles/all-styles.scss' as all;
 
+// * {
+//   border: red solid 1px;
+// }
+
 .WM {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 105px;
 
+  @include all.desktop {
+    padding: 0 60px;
+  }
+
+  @include all.notebook {
+    padding: 0 32px;
+  }
+
   &__image {
     width: 488px;
     height: 452px;
+    object-fit: cover;
+    align-self: center;
+
+    @include all.desktop {
+      width: 439px;
+      height: 407px;
+    }
+
+    @include all.notebook {
+      width: clamp(263px, 30dvw, 329px);
+      height: clamp(244px, 30dvw, 305px);
+    }
+
+    @include all.tablet {
+      display: none;
+    }
   }
 
   &__right {
@@ -16,30 +44,66 @@
     flex-direction: column;
     align-items: end;
     justify-content: space-between;
-    padding-left: 32px;
+    padding-left: 24px;
+
+    @include all.desktop {
+      padding-left: 36px;
+    }
+    @include all.tablet {
+      padding-left: 0;
+    }
 
     &__h2 {
       text-align: right;
       font-family: 'Roboto-M';
-      font-size: 54px;
+      font-size: clamp(32px, 4dvw, 54px);
+
+      @include all.tablet {
+        text-align: center;
+        width: 100%;
+      }
     }
 
     &__p {
       text-align: right;
       font-family: 'Roboto-R';
       font-size: 16px;
+
+      @include all.tablet {
+        text-align: center;
+        margin-bottom: 60px;
+      }
     }
 
     &__container {
-      width: 568px;
-      height: 186px;
+      width: 100%;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-end;
       margin-bottom: 8px;
+
+      @include all.desktop {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
       &__h3 {
         font-family: 'Roboto-B';
-        font-size: 48px;
+        font-size: clamp(18px, 2dvw, 48px);
+        width: calc(100% - 390px);
+        text-align: center;
+        padding-right: 25px;
+
+        @include all.desktop {
+          margin-top: 16px;
+          margin-right: 0px;
+          width: 100%;
+          text-align: left;
+        }
+        @include all.tablet {
+          text-align: center;
+          padding-right: 0;
+        }
       }
 
       &__right {
@@ -48,8 +112,14 @@
         justify-content: space-between;
         padding: 10px 0;
 
-        width: 65%;
+        width: 390px;
         height: 100%;
+
+        @include all.tablet {
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
 
         &__p {
           display: flex;
@@ -57,9 +127,22 @@
           gap: 10px;
           width: 180px;
 
+          @include all.tablet {
+            align-items: center;
+            text-align: left;
+            gap: 12px;
+            width: fit-content;
+            margin-bottom: 20px;
+          }
+
           svg {
             height: 50px;
             flex-shrink: 0;
+
+            @include all.tablet {
+              display: flex;
+              height: 45px;
+            }
           }
 
           .icon-hover {
@@ -83,12 +166,24 @@
           path {
             color: all.$color-text-highlight;
           }
+
+          @include all.tablet {
+            top: -80px;
+            left: calc(50% - 130px);
+          }
         }
 
         &__arrow2 {
           position: absolute;
-          top: 74%;
+          top: 68%;
           left: 54%;
+
+          @include all.tablet {
+            transform: rotate(25deg) scaleY(-1);
+            top: 88%;
+            left: calc(50% + 90px);
+          }
+
           path {
             color: all.$color-text-highlight;
           }
@@ -101,18 +196,28 @@
           path {
             color: all.$color-text-highlight;
           }
+          @include all.tablet {
+            display: none;
+          }
         }
       }
     }
 
     &__button {
       margin-top: 10px;
+
+      @include all.tablet {
+        align-self: center;
+      }
     }
   }
 }
 
 .selfEnd {
   align-self: flex-end;
+  @include all.tablet {
+    align-self: center;
+  }
 }
 
 .change-pos {

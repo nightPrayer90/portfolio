@@ -1,5 +1,11 @@
 @use '../../../../../../public/assets/styles/all-styles.scss' as all;
 
+section {
+  @include all.tablet {
+    margin-top: 0px;
+  }
+}
+
 .hero {
   display: flex;
   flex-direction: row;
@@ -12,7 +18,7 @@
     padding: 0 32px;
   }
 
-   @include all.tablet {
+  @include all.tablet {
     flex-direction: column-reverse;
     align-items: center;
   }
@@ -62,8 +68,8 @@
       padding-left: 0;
     }
     @include all.tablet {
-        text-align: center;
-      }
+      text-align: center;
+    }
 
     &__contactBtn {
       transform: rotate(-90deg);
@@ -81,6 +87,9 @@
       font-family: 'Roboto-M';
       color: all.$color-text;
       margin: 0;
+      @include all.tablet {
+        padding-top: 8px;
+      }
     }
 
     &__p {
@@ -91,7 +100,8 @@
   }
 
   &__image {
-    width: clamp(332px, 40vw, 539px);
-    height: clamp(342px, 40vw, 554px);
+    width: clamp(297px, 40vw, 539px);
+    height: clamp(305px, 40vw, 554px);
+    object-fit: cover;
   }
 }

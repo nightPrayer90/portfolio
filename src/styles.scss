@@ -21,7 +21,14 @@
 }
 
 body {
-  background: linear-gradient(180deg, all.$color-background-1 0%, all.$color-background-2 25%, all.$color-background-1 50%, all.$color-background-2 75%, all.$color-background-1 95%);
+  background: linear-gradient(
+    180deg,
+    all.$color-background-1 0%,
+    all.$color-background-2 25%,
+    all.$color-background-1 50%,
+    all.$color-background-2 75%,
+    all.$color-background-1 95%
+  );
 }
 
 section {
@@ -29,6 +36,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
+
+  @include all.notebook {
+    margin-top: 80px;
+  }
 }
 
 h1 {
@@ -59,6 +71,12 @@ button {
   cursor: pointer;
   border-radius: 0;
   border: none;
+
+  @include all.tablet {
+    padding: 12px 20px;
+    font-family: 'Roboto-R';
+    font-size: 16px;
+  }
 }
 
 .button--primary {
