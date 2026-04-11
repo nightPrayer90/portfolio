@@ -97,10 +97,11 @@
         @include all.desktop {
           margin-top: 16px;
           margin-right: 0px;
-          width: 100%;
+          width: 390px;
           text-align: left;
         }
         @include all.tablet {
+          width: 100%;
           text-align: center;
           padding-right: 0;
         }

@@ -4,7 +4,6 @@
   color: all.$color-text-highlight;
 }
 
-
 header {
   position: sticky;
   top: 0;
@@ -12,9 +11,13 @@ header {
   width: 100%;
 
   display: flex;
-  justify-content:  center;
+  justify-content: center;
 
-  background: linear-gradient(to bottom, rgba(all.$color-background-1, 1) 70%, rgba(all.$color-background-1, 0.2) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(all.$color-background-1, 1) 70%,
+    rgba(all.$color-background-1, 0.2) 100%
+  );
 
   .menu-bar {
     display: flex;
@@ -25,16 +28,20 @@ header {
     height: 92px;
     padding: 24px 140px;
 
+    @include all.desktop {
+      padding: 24px 90px;
+    }
+
     @include all.notebook {
       padding: 24px 32px;
-    } 
+    }
   }
 }
 
 .menu {
   display: flex;
   align-items: center;
-  gap:  clamp(16px, 1.5dvw, 18px);
+  gap: clamp(16px, 1.5dvw, 18px);
 
   &__logo {
     font-family: 'Handjet-R';
@@ -47,11 +54,11 @@ header {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap:  clamp(30px, 1.5dvw, 48px);
+    gap: clamp(30px, 1.5dvw, 48px);
 
     @include all.tablet {
       display: none;
-    } 
+    }
   }
 }
 
@@ -61,8 +68,8 @@ header {
   flex-direction: row;
 
   @include all.tablet {
-      display: none;
-    } 
+    display: none;
+  }
 
   &__button {
     border: none;
@@ -70,7 +77,7 @@ header {
     padding: 6px;
     font-family: 'Roboto-B';
     font-size: clamp(16px, 1.5dvw, 18px);
-  
+
     &--active {
       color: all.$color-text;
     }
@@ -91,4 +98,3 @@ a:active {
   color: all.$color-text;
   text-decoration: underline;
 }
-
