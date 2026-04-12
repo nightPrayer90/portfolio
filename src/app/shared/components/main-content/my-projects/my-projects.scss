@@ -6,22 +6,52 @@
   flex-direction: column;
   align-items: center;
   gap: 64px;
+
+  @include all.desktop {
+    padding: 0 90px;
+  }
+
+  @include all.notebook {
+    padding: 0 32px;
+  }
 }
 
 .project-header {
   font-family: 'Roboto-M';
-  font-size: 54px;
+  text-align: center;
+  font-size: clamp(32px, 4dvw, 54px);
 }
 
 .project {
   display: flex;
-  gap: 64px;
+  gap: clamp(24px, 2.5dvw, 64px);
+
+  @include all.tablet {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 
   &__img-wrapper {
+    align-self: center;
     width: 560px;
     height: 370px;
     flex-shrink: 0;
     cursor: pointer;
+
+    @include all.desktop {
+      width: 476px;
+      height: 314px;
+    }
+
+    @include all.notebook {
+      width: 392px;
+      height: 259px;
+    }
+
+    @include all.tablet {
+      width: 100%;
+      height: 100%;
+    }
 
     &__img {
       width: 100%;
@@ -31,11 +61,7 @@
     &__overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(217, 217, 217, 0.0) 5%,
-        rgba(29, 10, 121, 0.2) 80%
-      );
+      background: linear-gradient(to bottom, rgba(217, 217, 217, 0) 5%, rgba(29, 10, 121, 0.2) 80%);
     }
 
     &:hover &__overlay {
@@ -44,23 +70,36 @@
   }
 
   &__desc {
-
     &__h3 {
       font-family: 'Roboto-B';
-      font-size: 48px;
+      font-size: clamp(24px, 3dvw, 48px);
       color: all.$color-text;
       margin-top: 0;
       margin-bottom: 16px;
     }
 
     &__p {
-      margin-bottom: 50px;
-      font-size: 18px;
+      margin-bottom: clamp(0px, 2.5dvw, 50px);
+      font-size: clamp(16px, 1.5dvw, 18px);
     }
 
     &__btns {
       display: flex;
       flex-direction: row;
+      gap: 16px;
+
+      @include all.tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__btns-mobile {
+    display: none;
+
+    @include all.tablet {
+      display: flex;
+      justify-content: center;
       gap: 16px;
     }
   }
@@ -69,4 +108,9 @@
 .revert {
   flex-direction: row-reverse;
   text-align: right;
+
+  @include all.tablet {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }

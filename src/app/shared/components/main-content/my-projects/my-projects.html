@@ -5,7 +5,15 @@
 
             <!-- Join -->
             <div class="project">
-                <div class="project__img-wrapper">
+                <div class="project__btns-mobile">
+                    <button class="button--secondary"
+                        (click)="openLink('https://github.com')">GitHub</button>
+                    <button class="button--primary"
+                        (click)="openLink('https://martinsteguweit.developerakademie.net/el-pollo-loco/index.html')">Live
+                        Test</button>
+                </div>
+
+                <div (click)="openLink('https://martinsteguweit.developerakademie.net/el-pollo-loco/index.html')" class="project__img-wrapper">
                     <img class="project__img-wrapper__img" src="assets/images/join.png" alt="">
                     <div class="project__img-wrapper__overlay"></div>
                 </div>
@@ -14,6 +22,7 @@
                     <h3 class="project__desc__h3">Join</h3>
                     <p class="project__desc__p">Angular | TypeScript | HTML | CSS | Firebase</p>
                     <p class="project__desc__p">{{ 'PROJECTS.join' | translate }}</p>
+
                     <div class="project__desc__btns">
                         <button class="button--secondary">GitHub</button>
                         <button class="button--primary">Live Test</button>
@@ -23,7 +32,16 @@
 
             <!-- Pollo Loco -->
             <div class="project revert">
-                <div class="project__img-wrapper">
+                <div class="project__btns-mobile">
+                    <button class="button--secondary"
+                        (click)="openLink('https://github.com/nightPrayer90/el-pollo-loco')">GitHub</button>
+                    <button class="button--primary"
+                        (click)="openLink('https://martinsteguweit.developerakademie.net/el-pollo-loco/index.html')">Live
+                        Test</button>
+                </div>
+
+
+                <div (click)="openLink('https://martinsteguweit.developerakademie.net/el-pollo-loco/index.html')" class="project__img-wrapper">
                     <img class="project__img-wrapper__img" src="assets/images/pollo-loco.png" alt="">
                     <div class="project__img-wrapper__overlay"></div>
                 </div>
@@ -32,11 +50,16 @@
                     <h3 class="project__desc__h3">Pollo Loco</h3>
                     <p class="project__desc__p">JavaScript | HTML | CSS</p>
                     <p class="project__desc__p">{{ 'PROJECTS.polloLoco' | translate }}</p>
+
                     <div class="project__desc__btns revert">
-                        <button class="button--secondary" (click)="openLink('https://github.com/nightPrayer90/el-pollo-loco')">GitHub</button>
-                        <button class="button--primary" (click)="openLink('https://martinsteguweit.developerakademie.net/el-pollo-loco/index.html')">Live Test</button>
+                        <button class="button--secondary"
+                            (click)="openLink('https://github.com/nightPrayer90/el-pollo-loco')">GitHub</button>
+                        <button class="button--primary"
+                            (click)="openLink('https://martinsteguweit.developerakademie.net/el-pollo-loco/index.html')">Live
+                            Test</button>
                     </div>
                 </div>
+
             </div>
 
         </div>
