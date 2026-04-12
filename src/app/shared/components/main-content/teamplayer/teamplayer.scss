@@ -1,44 +1,100 @@
 @use '../../../../../../public/assets/styles/all-styles.scss' as all;
 
 section {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .teamplayer {
-    padding: 0 110px;
+  padding: 0 110px;
 
-    &__h2 {
-        font-family: 'Roboto-B';
-        font-size: 24px;
-        margin-bottom: 30px;
+  @include all.desktop {
+    padding: 0 60px;
+  }
+
+  @include all.notebook {
+    padding: 0 32px;
+  }
+
+  h2 {
+    font-family: 'Roboto-B';
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__header {
+    @include all.notebook {
+      display: none;
     }
+  }
+
+  &__header-short {
+    display: none;
+    text-align: center;
+
+    @include all.notebook {
+      display: block;
+
+      span {
+        color: all.$color-text-highlight;
+        font-family: 'Roboto-R';
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  @include all.notebook {
+    padding: 0 32px;
+  }
 }
 
 .members {
-    display: flex;
-    padding-left: 10px;
-    width: 100%;
-    gap:3%;
+  display: flex;
+  padding-left: 10px;
+  width: 100%;
+  //
+  gap: 3%;
 
-    svg path{
-        color: all.$color-text-highlight;
+  svg path {
+    color: all.$color-text-highlight;
+  }
+
+  @include all.tablet {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
+
+    svg {
+      display: none;
+    }
+  }
 }
 
 .member {
-    width: 25%;
+  width: 25%;
+  flex-shrink: 0;
 
-    &__name {
-        font-family: 'Roboto-B';
-        font-size: 24px;
-    }
+  @include all.tablet {
+    width: 240px;
+    border: 1px solid all.$color-text;
+    padding: 16px;
+  }
 
-    p {
-        font-family: 'Roboto-R';
-        font-size: 18px;
-    }
+  &__name {
+    font-family: 'Roboto-B';
+    font-size: 24px;
+  }
 
-    &__project {
-        margin-bottom: 24px;
-    }
+  p {
+    font-family: 'Roboto-R';
+    font-size: clamp(16px, 2dvw, 18px);
+  }
+
+  &__project {
+    margin-bottom: 24px;
+  }
 }
