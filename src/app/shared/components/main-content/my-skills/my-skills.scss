@@ -1,9 +1,24 @@
+@use '../../../../../../public/assets/styles/all-styles.scss' as all;
+
 .skills {
   padding: 0 110px;
+
+  @include all.desktop {
+    padding: 0 90px;
+  }
+
+  @include all.notebook {
+    padding: 0 32px;
+  }
+
   &__h2 {
     font-family: 'Roboto-M';
-    font-size: 54px;
+    font-size: clamp(32px, 4dvw, 54px);
     margin-bottom: 36px;
+
+    @include all.mobile {
+      text-align: center;
+    }
   }
 }
 
@@ -11,7 +26,24 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   justify-items: start;
-  row-gap: 50px;
+  row-gap: 120px;
+
+  @include all.notebook {
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 60px;
+  }
+
+  @include all.tablet {
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 60px;
+    justify-items: start;
+  }
+
+  @include all.mobile {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    justify-items: center;
+  }
 }
 
 .skill {
@@ -20,7 +52,6 @@
   align-items: center;
   gap: 10px;
   width: 100px;
-  height: 150px;
   font-size: 18px;
   text-align: center;
 
@@ -28,23 +59,92 @@
     width: 70px;
     height: auto;
   }
+
+  &__name {
+    font-family: 'Roboto-B';
+    font-size: clamp(16px, 1.5dvw, 18px);
+  }
+
+  @include all.notebook {
+    width: 90px;
+    padding: 0 32px;
+
+    svg {
+      width: 60px;
+      height: auto;
+    }
+  }
+
+  @include all.tablet {
+    width: 85px;
+
+    svg {
+      width: 55px;
+      height: auto;
+    }
+  }
+
+  @include all.mobile {
+    width: 70px;
+
+    svg {
+      width: 45px;
+      height: auto;
+    }
+    &__name {
+      display: none;
+    }
+  }
 }
 
 .challange-me {
   cursor: pointer;
-  &__hover {
+  &__hover-Container {
     display: none;
+
+    @include all.mobile {
+      display: block;
+      width: 290px;
+      padding: 16px 0;
+      text-align: center;
+      font-family: 'Roboto-R';
+      font-size: 16px;
+    }
   }
+
   &:hover {
-    .challange-me__hover {
+    .challange-me__hover-Container {
       display: block;
       position: absolute;
       width: 250px;
-      top: 0;
       left: 130px;
+      top: -10px;
       text-align: left;
       font-size: 18px;
       font-family: 'Roboto-R';
+
+      @include all.desktop {
+        font-size: 16px;
+        width: 200px;
+      }
+
+      @include all.notebook {
+        top: 0px;
+        left: 110px;
+        width: 250px;
+        text-align: left;
+      }
+
+      @include all.mobile {
+        position: relative;
+        display: block;
+        width: 290px;
+        padding: 16px 0;
+        text-align: center;
+        font-family: 'Roboto-B';
+        left: 0;
+        top: 0;
+      }
     }
   }
 }
