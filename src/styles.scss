@@ -45,7 +45,7 @@ section {
 
 h1 {
   color: all.$color-text-highlight;
-  font-size: 54px;
+  font-size: clamp(32px, 4dvw, 54px);
   font-family: 'Roboto-M';
   margin-bottom: 64px;
   margin-top: 64px;

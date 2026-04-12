@@ -1,5 +1,19 @@
 @use '../../../../../public/assets/styles/all-styles.scss' as all;
 
+.imprint {
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-bottom: 64px;
+
+  @include all.desktop {
+    padding: 0 90px;
+  }
+
+  @include all.notebook {
+    padding: 0 32px;
+  }
+}
+
 p {
   font-size: 18px;
   font-family: 'Roboto-R';
@@ -7,7 +21,7 @@ p {
 }
 
 h3 {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 li {
@@ -15,17 +29,11 @@ li {
   font-family: 'Roboto-R';
 }
 
-.imprint {
-  padding-left: 200px;
-  padding-right: 200px;
-  margin-bottom: 64px;
-}
-
 span {
   color: all.$color-text-highlight;
 }
 
 li {
-    list-style-type: disc;
-    list-style-position: inside;
+  list-style-type: disc;
+  list-style-position: inside;
 }
