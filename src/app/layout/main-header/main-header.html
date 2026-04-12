@@ -11,14 +11,39 @@
         </nav>
 
         <div class="language-container">
-            <div class="language-container">
-                <button class="language-container__button" 
-                (click)="switchLang('de')"
+            <button class="language-container__button" (click)="switchLang('de')"
                 [ngClass]="getLangClass('de')">DE</button>
-                <p>|</p>
-                <button class="language-container__button" (click)="switchLang('en')"
+            <p>|</p>
+            <button class="language-container__button" (click)="switchLang('en')"
                 [ngClass]="getLangClass('en')">EN</button>
-            </div>
+        </div>
+
+        <div class="burger">
+            <button class="burger__btn" (click)="toggleBurgerMenu()" [class.open]="menuOpen">
+                <span class="burger__btn__separator s1"></span>
+                <span class="burger__btn__separator s2"></span>
+                <span class="burger__btn__separator s3"></span>
+            </button>
+        </div>
+
+        <div [class.burger-nav]="menuOpen" [class.burger-hide]="!menuOpen">
+            <ul class="burger-nav__system">
+                <li><a (click)="closeBurgerMenu()" [routerLink]="['']" fragment="why-me">{{ 'NAV.whyMe' | translate }}</a></li>
+                <li><a (click)="closeBurgerMenu()" [routerLink]="['']" fragment="skills">{{ 'NAV.skills' | translate }}</a></li>
+                <li><a (click)="closeBurgerMenu()" [routerLink]="['']" fragment="projects">{{ 'NAV.projects' | translate }}</a></li>
+                <li><a (click)="closeBurgerMenu()" [routerLink]="['']" fragment="contact">{{ 'NAV.contact' | translate }}</a></li>
+
+                <li>
+                    <div>
+                        <button (click)="switchLang('de')"
+                            [ngClass]="getLangClass('de')">DE</button>
+                        <p>|</p>
+                        <button (click)="switchLang('en')"
+                            [ngClass]="getLangClass('en')">EN</button>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
+
 </header>

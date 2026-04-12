@@ -7,7 +7,7 @@
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 10;
   width: 100%;
 
   display: flex;
@@ -97,4 +97,129 @@ a:hover {
 a:active {
   color: all.$color-text;
   text-decoration: underline;
+}
+
+.burger {
+  display: none;
+  z-index: 12;
+
+  @include all.tablet {
+    display: block;
+  }
+
+  &__btn {
+    padding: 0;
+    background: none;
+
+    &__separator {
+      display: block;
+      width: 40px;
+      height: 2px;
+      background-color: all.$color-text-highlight;
+      margin: 12px 0;
+    }
+  }
+}
+
+.burger-hide {
+  display: none;
+}
+
+.burger-nav {
+  display: none;
+  @include all.tablet {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: all.$color-background-1;
+    z-index: 11;
+
+    &__system {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 70px 0;
+
+      li {
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        margin: 20px;
+
+        a {
+          text-align: center;
+          font-size: 18px;
+          font-family: 'Roboto-B';
+        }
+
+        div {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+
+          p {
+            padding: 0 8px;
+            font-size: 20px;
+          }
+
+          button {
+            background: none;
+            padding: 0 8px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.open {
+  .s1 {
+    animation: topLineOpen 0.4s forwards;
+  }
+  .s2 {
+    animation: middleLineOpen 0.45s forwards;
+  }
+  .s3 {
+    animation: bottomLineOpen 0.5s forwards;
+  }
+}
+
+@keyframes topLineOpen {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  30% {
+    transform: translateY(14px) rotate(0);
+  }
+  100% {
+    transform: translateY(14px) rotate(45deg);
+  }
+}
+
+@keyframes middleLineOpen {
+  0% {
+    transform: scaleX(1);
+  }
+  70% {
+    transform: scaleX(0.3);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes bottomLineOpen {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-14px) rotate(0);
+  }
+  100% {
+    transform: translateY(-14px) rotate(-45deg);
+  }
 }
