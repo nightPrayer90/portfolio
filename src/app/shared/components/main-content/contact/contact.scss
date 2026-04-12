@@ -5,12 +5,33 @@
   width: 100%;
   margin-bottom: 80px;
 
+  @include all.desktop {
+    padding: 0 60px;
+  }
+
+  @include all.notebook {
+    padding: 0 32px;
+  }
+
+   @include all.tablet {
+    margin-bottom: 8px;
+  }
+
   &__h2 {
     font-family: 'Roboto-M';
-    font-size: 54px;
+    font-size: clamp(32px, 4dvw, 54px);
 
     svg path {
       color: all.$color-text-highlight;
+    }
+
+    @include all.tablet {
+      text-align: center;
+      width: 100%;
+
+      svg {
+        display: none;
+      }
     }
   }
 }
@@ -33,10 +54,6 @@
     right: 12px;
     transform: translateY(-50%);
   }
-
-  .input-invalid::placeholder {
-    color: red;
-  }
 }
 
 .inputs {
@@ -47,11 +64,21 @@
   width: 100%;
   gap: 40px;
 
+  @include all.tablet {
+    text-align: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   &__left {
     display: flex;
     flex-direction: column;
     gap: 32px;
     flex: 1;
+
+    @include all.tablet {
+      gap: 16px;
+    }
   }
 
   &__right {
@@ -64,9 +91,11 @@
       transform: translate(-50%, -50%);
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 38px;
       top: 50%;
       right: -19px;
+
       svg path {
         color: all.$color-text-highlight;
       }
@@ -93,6 +122,19 @@ textarea {
   resize: none;
   width: 100%;
   height: 100%;
+
+  @include all.tablet {
+    height: 144px;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(all.$color-text, 0.6);
+}
+
+.ng-touched::placeholder {
+  color: rgba(255, 0, 0, 0.7);
 }
 
 .fullHeight {
@@ -135,12 +177,16 @@ textarea {
 p {
   margin-bottom: 32px;
   font-family: 'Roboto-R';
-  font-size: 18px;
+  font-size: clamp(16px, 1.5dvw, 18px);
+
+  @include all.tablet {
+    text-align: center;
+  }
 }
 
 .contact-links {
   display: flex;
-  font-size: 20px;
+  font-size: clamp(18px, 2dvw, 20px);
   font-family: 'Roboto-M';
   align-items: center;
   column-gap: 16px;
@@ -176,4 +222,72 @@ p {
   display: flex;
   justify-content: flex-end;
   margin-top: 18px;
+  @include all.tablet {
+    justify-content: center;
+  }
+}
+
+.hide-tablet {
+  @include all.tablet {
+    display: none;
+  }
+}
+
+.show-tablet {
+  display: none;
+
+  @include all.tablet {
+    display: block;
+  }
+}
+
+.tablet-contact {
+  display: none;
+
+  @include all.tablet {
+    margin-top: 70px;
+    display: block;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      text-align: center;
+    
+      svg {
+        margin: 16px 0;
+      }
+    }
+
+    &__arrow {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      top: -20px;
+      right: 0;
+
+      svg path {
+        color: all.$color-text-highlight;
+      }
+      .icon_hover {
+        display: none;
+      }
+      &:hover {
+        svg path {
+          color: all.$color-text;
+        }
+
+        .icon_default {
+          display: none;
+        }
+        .icon_hover {
+          display: block;
+        }
+      }
+    }
+
+  }
 }

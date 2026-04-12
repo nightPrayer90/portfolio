@@ -41,22 +41,25 @@ export class Contact {
 
     if (nameInput && this.userform.get('yourName')?.invalid) {
       nameInput.placeholder = nP;
-      this.changeScssClass(isAdd, nameInput, "input-invalid");
+      // this.changeScssClass(isAdd, nameInput, "input-invalid");
+      // this.changeScssClass(!isAdd, nameInput, "input-empty");
     }
 
     if (emailInput && this.userform.get('yourEmail')?.invalid) {
       emailInput.placeholder = eP;
-      this.changeScssClass(isAdd, emailInput, "input-invalid");
+      // this.changeScssClass(isAdd, emailInput, "input-invalid");
+      // this.changeScssClass(!isAdd, emailInput, "input-empty");
     }
 
     if (messageInput && this.userform.get('yourMessage')?.invalid) {
       messageInput.placeholder = mP;
-      this.changeScssClass(isAdd, messageInput, "input-invalid");
+      // this.changeScssClass(isAdd, messageInput, "input-invalid");
+      // this.changeScssClass(!isAdd, messageInput, "input-empty");
     }
   }
 
-  changeScssClass(isAdd:boolean, elemet:HTMLElement, className:string) {
-    if (isAdd) elemet.classList.add(className);
-    else elemet.classList.remove(className);
-  }
+  // changeScssClass(isAdd:boolean, elemet:HTMLElement, className:string) {
+  //   if (isAdd) elemet.classList.add(className);
+  //   else elemet.classList.remove(className);
+  // }
 }
