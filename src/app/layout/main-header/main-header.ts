@@ -23,7 +23,7 @@ export class MainHeader {
    * 3. Fallback language or default ("de")
    */
   ngOnInit(): void {
-    const savedLang = localStorage.getItem('port_lang');
+    const savedLang: string | null = localStorage.getItem('port_lang');
 
     if (savedLang) {
       this.currentLang = savedLang;

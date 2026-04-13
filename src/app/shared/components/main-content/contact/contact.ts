@@ -58,9 +58,9 @@ export class Contact {
  * @param {string} mP - Placeholder text for the message textarea
  */
   updateInputPlaceholders(nP:string, eP: string, mP:string ): void {
-    const nameInput = document.getElementById('yourName') as HTMLInputElement;
-    const emailInput = document.getElementById('yourMail') as HTMLInputElement;
-    const messageInput = document.getElementById('yourMessage') as HTMLTextAreaElement;
+    const nameInput = document.getElementById('yourName') as HTMLInputElement | null;
+    const emailInput = document.getElementById('yourMail') as HTMLInputElement | null;
+    const messageInput = document.getElementById('yourMessage') as HTMLTextAreaElement | null;
 
     if (nameInput && this.userform.get('yourName')?.invalid) {
       nameInput.placeholder = nP;

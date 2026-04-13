@@ -3,17 +3,17 @@
         <nav class="menu">
             <p [routerLink]="['']" fragment="hero" class="menu__logo">&lt;MS&gt;</p>
             <ul class="menu__system">
-                <li><a [routerLink]="['']" fragment="why-me">{{ 'NAV.whyMe' | translate }}</a></li>
-                <li><a [routerLink]="['']" fragment="skills">{{ 'NAV.skills' | translate }}</a></li>
-                <li><a [routerLink]="['']" fragment="projects">{{ 'NAV.projects' | translate }}</a></li>
-                <li><a [routerLink]="['']" fragment="contact">{{ 'NAV.contact' | translate }}</a></li>
+                <li><a routerLink="" fragment="why-me">{{ 'NAV.whyMe' | translate }}</a></li>
+                <li><a routerLink="" fragment="skills">{{ 'NAV.skills' | translate }}</a></li>
+                <li><a routerLink="" fragment="projects">{{ 'NAV.projects' | translate }}</a></li>
+                <li><a routerLink="" fragment="contact">{{ 'NAV.contact' | translate }}</a></li>
             </ul>
         </nav>
 
         <div class="language-container">
             <button class="language-container__button" (click)="switchLang('de')"
                 [ngClass]="getLangClass('de')">DE</button>
-            <p>|</p>
+            <p class="separator">|</p>
             <button class="language-container__button" (click)="switchLang('en')"
                 [ngClass]="getLangClass('en')">EN</button>
         </div>
@@ -28,16 +28,16 @@
 
         <div [class.burger-nav]="menuOpen" [class.burger-hide]="!menuOpen">
             <ul class="burger-nav__system">
-                <li><a (click)="closeBurgerMenu()" [routerLink]="['']" fragment="why-me">{{ 'NAV.whyMe' | translate }}</a></li>
-                <li><a (click)="closeBurgerMenu()" [routerLink]="['']" fragment="skills">{{ 'NAV.skills' | translate }}</a></li>
-                <li><a (click)="closeBurgerMenu()" [routerLink]="['']" fragment="projects">{{ 'NAV.projects' | translate }}</a></li>
-                <li><a (click)="closeBurgerMenu()" [routerLink]="['']" fragment="contact">{{ 'NAV.contact' | translate }}</a></li>
+                <li><a (click)="closeBurgerMenu()" routerLink="" fragment="why-me">{{ 'NAV.whyMe' | translate }}</a></li>
+                <li><a (click)="closeBurgerMenu()" routerLink="" fragment="skills">{{ 'NAV.skills' | translate }}</a></li>
+                <li><a (click)="closeBurgerMenu()" routerLink="" fragment="projects">{{ 'NAV.projects' | translate }}</a></li>
+                <li><a (click)="closeBurgerMenu()" routerLink="" fragment="contact">{{ 'NAV.contact' | translate }}</a></li>
 
                 <li>
                     <div>
                         <button (click)="switchLang('de')"
                             [ngClass]="getLangClass('de')">DE</button>
-                        <p>|</p>
+                        <p class="separator">|</p>
                         <button (click)="switchLang('en')"
                             [ngClass]="getLangClass('en')">EN</button>
                     </div>

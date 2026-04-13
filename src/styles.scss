@@ -81,9 +81,10 @@ button {
 
 .button--primary {
   color: all.$color-text-btn-primary;
-  background-color: all.$color-btn;
+  background-color: all.$color-text;
 
   &:hover {
+    transition: color 0.2s;
     color: all.$color-text-highlight;
     font-family: 'Roboto-R';
   }
@@ -102,10 +103,11 @@ button {
 
 .button--secondary {
   background: none;
-  border: solid 1px all.$color-btn;
+  border: solid 1px all.$color-text;
   color: all.$color-text-highlight;
 
   &:hover {
+    transition: color 0.2s;
     color: all.$color-text;
   }
 
@@ -125,5 +127,5 @@ button {
 .input-field {
   padding: 15px 15px;
   background: none;
-  border: solid 1px all.$color-btn;
+  border: solid 1px all.$color-text;
 }

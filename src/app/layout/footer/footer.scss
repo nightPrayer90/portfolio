@@ -42,7 +42,7 @@ footer {
 
     &__MS {
       font-family: 'Handjet-R';
-      font-size: clamp(48px, 1.5dvw, 54px);;
+      font-size: clamp(48px, 1.5dvw, 54px);
       font-weight: 700;
     }
 
@@ -125,8 +125,10 @@ a {
 
 a:hover {
   color: all.$color-text;
+  transition: color 0.2s;
   svg path {
     color: all.$color-text;
+    transition: color 0.2s;
   }
 }
 
