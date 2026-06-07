@@ -138,6 +138,10 @@ textarea::placeholder {
   color: rgba(255, 0, 0, 0.7);
 }
 
+.invalid-field {
+  color: all.$color-text-highlight;
+}
+
 .fullHeight {
   height: 100%;
 }

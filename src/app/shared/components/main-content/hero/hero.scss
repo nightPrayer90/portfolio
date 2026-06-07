@@ -103,5 +103,6 @@ section {
     width: clamp(297px, 40vw, 539px);
     height: clamp(305px, 40vw, 554px);
     object-fit: cover;
+    transform: scaleX(-1);
   }
 }
