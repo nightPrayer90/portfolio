@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="inputs__right hide-tablet">
-                        <a class="contact-links" href="mailto:m_steguweit@mail.com">
+                        <a class="contact-links" href="mailto:m_steguweit@mail.de">
                             <svg width="29" height="30" viewBox="0 0 29 30" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -28,7 +28,7 @@
                             <span>E-mail: m_steguweit@mail.de</span>
                         </a>
 
-                        <a class="contact-links" href="tel:015712345668">
+                        <a class="contact-links" href="tel:01776731228">
                             <svg width="27" height="31" viewBox="0 0 27 31" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -65,7 +65,7 @@
                         <!-- your name -->
                         <div class="input-wrapper">
                             <input id="yourName" class="input-field" type="text" formControlName="yourName"
-                                [placeholder]="userform.get('yourName')?.touched && userform.get('yourName')?.invalid ? 'Your name is required' : 'Your Name'">
+                                [placeholder]="(userform.get('yourName')?.touched && userform.get('yourName')?.invalid ? 'CONTACT.nameRequired' : 'CONTACT.namePlaceholder') | translate">
 
                             @if (userform.get("yourName")?.touched){
                             @if (!userform.get("yourName")?.valid) {
@@ -76,7 +76,7 @@
                                     fill="#F92103" />
                                 <ellipse cx="2.66645" cy="22.2222" rx="1.77778" ry="1.77778" fill="#F92103" />
                             </svg>
-                            <span class="invalid-field">{{ getNameError() }}</span>
+                            <span class="invalid-field">{{ getNameError() | translate }}</span>
                             }
                             @else {
                             <svg class="input-icon" width="25" height="37" viewBox="0 0 25 37" fill="none"
@@ -91,8 +91,8 @@
 
                         <!-- your Email -->
                         <div class="input-wrapper">
-                            <input id="yourMail" class="input-field input-empty" type="text" formControlName="yourEmail"
-                                [placeholder]="userform.get('yourEmail')?.touched && userform.get('yourEmail')?.invalid ? 'Your Email is required' : 'Your Email'">
+                            <input id="yourMail" class="input-field input-empty" type="text" formControlName="yourEmail" 
+                            [placeholder]="(userform.get('yourEmail')?.touched && userform.get('yourEmail')?.invalid ? 'CONTACT.emailRequired' : 'CONTACT.emailPlaceholder') | translate">
 
                             @if (userform.get("yourEmail")?.touched){
                             @if (!userform.get("yourEmail")?.valid) {
@@ -103,7 +103,7 @@
                                     fill="#F92103" />
                                 <ellipse cx="2.66645" cy="22.2222" rx="1.77778" ry="1.77778" fill="#F92103" />
                             </svg>
-                            <span class="invalid-field">{{ getEmailError() }}</span> }
+                            <span class="invalid-field">{{ getEmailError() | translate }}</span> }
                             @else {
                             <svg class="input-icon" width="25" height="37" viewBox="0 0 25 37" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +121,7 @@
                         <div class="input-wrapper fullHeight">
                             <textarea class="input-field input-empty" id="yourMessage" type="text"
                                 formControlName="yourMessage"
-                                [placeholder]="userform.get('yourMessage')?.touched && userform.get('yourMessage')?.invalid ? 'Your message is required' : 'Your Message'"></textarea>
+                                [placeholder]="(userform.get('yourMessage')?.touched && userform.get('yourMessage')?.invalid ? 'CONTACT.messageRequired' : 'CONTACT.messagePlaceholder') | translate"></textarea>
 
                             @if (userform.get("yourMessage")?.touched){
                             @if (!userform.get("yourMessage")?.valid) {
@@ -132,7 +132,7 @@
                                     fill="#F92103" />
                                 <ellipse cx="2.66645" cy="22.2222" rx="1.77778" ry="1.77778" fill="#F92103" />
                             </svg>
-                            <span class="invalid-field">{{ getMessageError() }}</span>
+                            <span class="invalid-field">{{ getMessageError() | translate }}</span>
                             }
                             @else {
                             <svg class="input-icon" width="25" height="37" viewBox="0 0 25 37" fill="none"

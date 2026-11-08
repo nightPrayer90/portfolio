@@ -29,9 +29,9 @@
     "mates": "Need a teamplayer? Hers's what my colleagues say about me",
     "matesShort" :"Need a teamplayer?",
     "matesShort2" :"Hers's what my colleagues say about me",
-    "mate1": "Martin had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person.",
-    "mate2": "Martin had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person.",
-    "mate3": "Martin had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person."
+    "mate1": "Martin is an ambitious person who approaches his tasks conscientiously and with great patience, and actively collaborates with the team during group projects.",
+    "mate2": "Martin is objective, fact-based, and logical in his thinking. He doesn't make decisions based on gut feelings, but rather in a well-founded, thoughtful, and transparent manner.",
+    "mate3": "I`d like to highlight the structure of our collaboration. Everything is clearly organized, transparent, and easy to follow;from the initial planning stage through to the final implementation."
   },
   "CONTACT": {
     "contact": "Contact me",
@@ -40,7 +40,17 @@
     "privacy2": " and agree to the processing of my data as outlined.",
     "privacyLink": "Privacy policy",
     "sendBtn": "Send",
-    "sentBtn": "Sent ✓"
+    "sentBtn": "Sent ✓",
+    "namePlaceholder": "Your name",
+    "nameRequired": "Your name is required",
+    "nameFull": "Please enter first and last name",
+    "nameChars": "No special characters allowed",
+    "emailPlaceholder": "Your email",
+    "emailRequired": "Your email is required",
+    "emailInvalid": "Please enter a valid email address",
+    "messagePlaceholder": "Your message",
+    "messageRequired": "Your message is required",
+    "messageShort": "That's a bit short, tell me more!"
   },
   "FOOTER": {
     "imprint": "Legal notice",

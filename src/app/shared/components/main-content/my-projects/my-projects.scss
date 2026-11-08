@@ -121,3 +121,12 @@
     text-align: center;
   }
 }
+
+.revert-button {
+   justify-content: end;
+
+  @include all.tablet {
+    flex-direction: column;
+    text-align: center;
+  }
+}

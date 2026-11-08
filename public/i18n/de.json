@@ -29,18 +29,28 @@
     "mates": "Suchen Sie einen Teamplayer? Das sagen meine Kollegen über mich",
     "matesShort" :"Suchen Sie einen Teamplayer?",
     "matesShort2" :"Das sagen meine Kollegen über mich",
-    "mate1": "Martin musste in Zusammenarbeit mit den Teammitgliedern Inhalte erstellen, aufbereiten und bereitstellen. Er ist ein zuverlässiger und freundlicher Mensch.",
-    "mate2": "Martin musste in Zusammenarbeit mit den Teammitgliedern Inhalte erstellen, aufbereiten und bereitstellen. Er ist ein zuverlässiger und freundlicher Mensch.",
-    "mate3": "Martin musste in Zusammenarbeit mit den Teammitgliedern Inhalte erstellen, aufbereiten und bereitstellen. Er ist ein zuverlässiger und freundlicher Mensch."
+    "mate1": "Martin ist ein ehrgeiziger Mensch der mit viel Geduld seine Aufgaben gewissenhaft meistert und in Gruppenarbeiten aktiv mit dem Team zusammenarbeitet.",
+    "mate2": "Martin ist sachlich, faktenorientiert und logisch strukturiert. Entscheidungen trifft er nicht aus dem Bauch heraus, sondern fundiert, durchdacht und nachvollziehbar.",
+    "mate3": "Besonders hervorheben möchte ich die Struktur in der Zusammenarbeit. Alles ist klar geordnet, transparent und nachvollziehbar; von der ersten Planung bis zur finalen Umsetzung."
   },
   "CONTACT": {
-    "contact": "Kontieren Sie mich",
+    "contact": "Kontaktieren Sie mich",
     "contactCta": "Noch unsicher, ob ich der richtige Ansprechpartner für Ihr Projekt bin? Kontaktieren Sie mich gerne und lassen Sie uns zusammenarbeiten.",
     "privacy1": "Ich habe die ",
     "privacy2": " gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
     "privacyLink": "Datenschutzerklärung",
     "sendBtn": "Senden",
-    "sentBtn": "Gesendet ✓"
+    "sentBtn": "Gesendet ✓",
+    "namePlaceholder": "Ihr Name",
+    "nameRequired": "Bitte geben Sie Ihren Namen ein",
+    "nameFull": "Bitte Vor- und Nachnamen eingeben",
+    "nameChars": "Bitte keine Sonderzeichen verwenden",
+    "emailPlaceholder": "Ihre E-Mail",
+    "emailRequired": "Bitte geben Sie Ihre E-Mail ein",
+    "emailInvalid": "Bitte eine gültige E-Mail-Adresse eingeben",
+    "messagePlaceholder": "Ihre Nachricht",
+    "messageRequired": "Bitte geben Sie eine Nachricht ein",
+    "messageShort": "Das ist etwas kurz – erzählen Sie mir mehr!"
   },
   "FOOTER": {
     "imprint": "Impressum",
