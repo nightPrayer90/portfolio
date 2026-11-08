@@ -100,9 +100,8 @@ section {
   }
 
   &__image {
-    width: clamp(297px, 40vw, 539px);
-    height: clamp(305px, 40vw, 554px);
+    height: clamp(305px, 40vw, 800px);
     object-fit: cover;
-    transform: scaleX(-1);
+    mask-image: linear-gradient(to bottom, black 95%, transparent);
   }
 }

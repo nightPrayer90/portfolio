@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +11,10 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  private http = inject(HttpClient);
+  private mailUrl = './sendMail.php';
+  isSent = signal(false);
+
   userform = new FormGroup({
     yourName: new FormControl('', [
       Validators.required,
@@ -40,12 +45,26 @@ export class Contact {
    *   - Updates input placeholders with error messages
    */
   formSubmit(): void {
-    if (this.userform.valid) {
-      console.log(this.userform.value);
-      this.formReset();
-    } else {
+    if (this.userform.invalid) {
       this.userform.markAllAsTouched();
+      return;
     }
+
+    const body = {
+      name: this.userform.value.yourName,
+      email: this.userform.value.yourEmail,
+      message: this.userform.value.yourMessage,
+    };
+
+    this.http.post(this.mailUrl, body).subscribe({
+      next: () => {
+        this.formReset();
+        this.isSent.set(true);
+        setTimeout(() => this.isSent.set(false), 5000);
+      },
+      error: (err) => {
+      },
+    });
   }
 
   /**
@@ -61,26 +80,26 @@ export class Contact {
   getNameError(): string {
     const field = this.userform.get('yourName');
     if (field?.hasError('pattern')) {
-      return "Please enter first and last name";
+      return 'Please enter first and last name';
     }
     if (field?.hasError('pattern')) {
-      return "No special characters allowed";
+      return 'No special characters allowed';
     }
-    return "";
+    return '';
   }
 
   getEmailError(): string {
     const field = this.userform.get('yourEmail');
-    if  (field?.hasError('email') || field?.hasError('pattern')) {
-      return "Please enter a valid email address";
+    if (field?.hasError('email') || field?.hasError('pattern')) {
+      return 'Please enter a valid email address';
     }
-    return "";
+    return '';
   }
 
   getMessageError(): string {
-  if (this.userform.get('yourMessage')?.hasError('minlength')) {
-    return "That's a bit short, tell me more!";
+    if (this.userform.get('yourMessage')?.hasError('minlength')) {
+      return "That's a bit short, tell me more!";
+    }
+    return '';
   }
-  return "";
-}
 }

@@ -74,6 +74,14 @@ section {
     svg {
       display: none;
     }
+
+    mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 93%,
+    transparent
+  );
   }
 }
 
@@ -85,6 +93,12 @@ section {
     width: 240px;
     border: 1px solid all.$color-text;
     padding: 16px;
+  }
+
+  @include all.mobile {
+    width: 235px;
+    padding: 10px;
+    margin: 0 10px 0 6px ;
   }
 
   &__name {

@@ -168,8 +168,14 @@
                 </p>
 
                 <div class="form-submit">
-                    <button class="button--primary" type="submit" [disabled]="!userform.get('privacyPolicy')?.valid">{{
-                        'CONTACT.sendBtn' | translate }}</button>
+                    <button class="button--primary" type="submit"
+                        [disabled]="!userform.get('privacyPolicy')?.valid|| isSent()">
+                        @if (isSent()) {
+                        {{ 'CONTACT.sentBtn' | translate }}
+                        } @else {
+                        {{ 'CONTACT.sendBtn' | translate }}
+                        }
+                    </button>
                 </div>
             </form>
 

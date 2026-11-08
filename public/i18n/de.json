@@ -39,7 +39,8 @@
     "privacy1": "Ich habe die ",
     "privacy2": " gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
     "privacyLink": "Datenschutzerklärung",
-    "sendBtn": "Senden"
+    "sendBtn": "Senden",
+    "sentBtn": "Gesendet ✓"
   },
   "FOOTER": {
     "imprint": "Impressum",
